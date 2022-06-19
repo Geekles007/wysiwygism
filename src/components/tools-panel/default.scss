@@ -1,6 +1,6 @@
 .panel {
   position: absolute;
-  width: 160px;
+  width: 130px;
   background: rgba(255,255,255,.1);
   box-shadow: 0 25px 45px rgba(0,0,0,.1);
   border: 1px solid rgba(255,255,255,.5);
@@ -11,7 +11,7 @@
   padding: 10px;
   backdrop-filter: blur(25px);
 
-  left: 20px;
+  right: 20px;
   top: 20px;
 
   &:hover {

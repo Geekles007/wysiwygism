@@ -1,4 +1,4 @@
-import React, {memo, useRef} from "react";
+import React, {memo} from "react";
 import "./default.scss";
 import PanelItem from "./children/panel-item";
 import {
@@ -13,18 +13,21 @@ import {
     FaListUl,
     FaListOl,
     FaCode,
-    FaTrash
+    FaTrash,
+    FaImage,
+    FaFont,
+    FaUnderline
 } from "react-icons/fa";
 import {IoIosReturnLeft, IoMdMove, IoIosReturnRight} from "react-icons/io";
-import {useMoveDiv} from "../../hooks/use-move-div";
+import {MdSplitscreen} from "react-icons/md";
 
 interface ToolsPanelProps {
 
 }
 
 const ToolsPanel = ({}: ToolsPanelProps) => {
-    const ref = useRef<HTMLDivElement>(null);
     let offsetX = 0, offsetY = 0;
+
     const move = (e: any) => {
         const el = e.target
         el.style.left = `${e.pageX - offsetX}px`
@@ -45,31 +48,36 @@ const ToolsPanel = ({}: ToolsPanelProps) => {
         e.preventDefault();
     }
 
-    return <div ref={ref} className={"panel"} onMouseDown={add} onMouseUp={remove}>
+    return <div className={"panel"} onMouseDown={add} onMouseUp={remove}>
         <div className="panel--mover">
             <IoMdMove/>
         </div>
         <div className="panel--items">
-            <PanelItem icon={<FaAlignLeft/>}/>
-            <PanelItem icon={<FaAlignCenter/>}/>
-            <PanelItem icon={<FaAlignRight/>}/>
-            <PanelItem icon={<FaAlignJustify/>}/>
-            <PanelItem icon={<FaBold/>}/>
-            <PanelItem icon={<FaItalic/>}/>
-            <PanelItem icon={<FaLink/>}/>
-            <PanelItem icon={<FaCopy/>}/>
+            <PanelItem icon={<IoIosReturnLeft/>}/>
+            <PanelItem icon={<IoIosReturnRight/>}/>
             <PanelItem icon={"h1"}/>
             <PanelItem icon={"h2"}/>
             <PanelItem icon={"h3"}/>
             <PanelItem icon={"h4"}/>
             <PanelItem icon={"h5"}/>
             <PanelItem icon={"h6"}/>
+            <PanelItem icon={"P"}/>
+            <PanelItem icon={<FaBold/>}/>
+            <PanelItem icon={<FaItalic/>}/>
+            <PanelItem icon={<FaFont />}/>
+            <PanelItem icon={<FaUnderline />}/>
+            <PanelItem icon={<FaAlignLeft/>}/>
+            <PanelItem icon={<FaAlignCenter/>}/>
+            <PanelItem icon={<FaAlignRight/>}/>
+            <PanelItem icon={<FaAlignJustify/>}/>
+            <PanelItem icon={<FaLink/>}/>
+            <PanelItem icon={<FaCopy/>}/>
             <PanelItem icon={<FaListOl/>}/>
             <PanelItem icon={<FaListUl/>}/>
-            <PanelItem icon={<IoIosReturnLeft/>}/>
-            <PanelItem icon={<IoIosReturnRight/>}/>
-            <PanelItem icon={<FaCode/>}/>
             <PanelItem icon={<FaTrash/>}/>
+            <PanelItem icon={<MdSplitscreen/>}/>
+            <PanelItem icon={<FaImage />}/>
+            <PanelItem icon={<FaCode/>}/>
         </div>
     </div>
 
