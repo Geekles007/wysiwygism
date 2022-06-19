@@ -53,31 +53,31 @@ const ToolsPanel = ({disabled}: ToolsPanelProps) => {
             <IoMdMove/>
         </div>
         <div className="panel--items">
-            <PanelItem icon={<IoIosReturnLeft/>}/>
-            <PanelItem icon={<IoIosReturnRight/>}/>
-            <PanelItem icon={"h1"}/>
-            <PanelItem icon={"h2"}/>
-            <PanelItem icon={"h3"}/>
-            <PanelItem icon={"h4"}/>
-            <PanelItem icon={"h5"}/>
-            <PanelItem icon={"h6"}/>
-            <PanelItem icon={"P"}/>
-            <PanelItem icon={<FaBold/>}/>
-            <PanelItem icon={<FaItalic/>}/>
-            <PanelItem icon={<FaFont />}/>
-            <PanelItem icon={<FaUnderline />}/>
-            <PanelItem icon={<FaAlignLeft/>}/>
-            <PanelItem icon={<FaAlignCenter/>}/>
-            <PanelItem icon={<FaAlignRight/>}/>
-            <PanelItem icon={<FaAlignJustify/>}/>
-            <PanelItem icon={<FaLink/>}/>
-            <PanelItem icon={<FaCopy/>}/>
-            <PanelItem icon={<FaListOl/>}/>
-            <PanelItem icon={<FaListUl/>}/>
-            <PanelItem icon={<FaTrash/>}/>
-            <PanelItem icon={<MdSplitscreen/>}/>
-            <PanelItem icon={<FaImage />}/>
-            <PanelItem icon={<FaCode/>}/>
+            <PanelItem id={"previous"} icon={<IoIosReturnLeft/>}/>
+            <PanelItem id={"next"} icon={<IoIosReturnRight/>}/>
+            <PanelItem id={"h1"} icon={"h1"}/>
+            <PanelItem id={"h2"} icon={"h2"}/>
+            <PanelItem id={"h3"} icon={"h3"}/>
+            <PanelItem id={"h4"} icon={"h4"}/>
+            <PanelItem id={"h5"} icon={"h5"}/>
+            <PanelItem id={"h6"} icon={"h6"}/>
+            <PanelItem id={"paragraph"} icon={"P"}/>
+            <PanelItem id={"boldy"} icon={<FaBold/>}/>
+            <PanelItem id={"italic"} icon={<FaItalic/>}/>
+            <PanelItem id={"font-family"} icon={<FaFont />}/>
+            <PanelItem id={"underline"} icon={<FaUnderline />}/>
+            <PanelItem id={"align-left"} icon={<FaAlignLeft/>}/>
+            <PanelItem id={"align-center"} icon={<FaAlignCenter/>}/>
+            <PanelItem id={"align-right"} icon={<FaAlignRight/>}/>
+            <PanelItem id={"align-justify"} icon={<FaAlignJustify/>}/>
+            <PanelItem id={"link"} icon={<FaLink/>}/>
+            <PanelItem id={"copy"} icon={<FaCopy/>}/>
+            <PanelItem id={"list-ol"} icon={<FaListOl/>}/>
+            <PanelItem id={"list-ul"} icon={<FaListUl/>}/>
+            <PanelItem id={"trash"} icon={<FaTrash/>}/>
+            <PanelItem id={"splitty"} icon={<MdSplitscreen/>}/>
+            <PanelItem id={"image"} icon={<FaImage />}/>
+            <PanelItem id={"code"} icon={<FaCode/>}/>
         </div>
     </div>
 

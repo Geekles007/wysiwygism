@@ -3,11 +3,12 @@ import React, {memo} from "react";
 interface PanelItemProps {
     icon: React.ReactNode | string;
     disabled?: boolean;
+    id: string;
 }
 
-const PanelItem = ({icon, disabled}: PanelItemProps) => {
+const PanelItem = ({icon, disabled, id}: PanelItemProps) => {
 
-    return <button disabled={disabled} className={"panel--item"}>
+    return <button id={id} disabled={disabled} className={"panel--item"}>
         {icon}
     </button>
 

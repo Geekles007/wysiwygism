@@ -2,6 +2,7 @@ import React, {ChangeEvent, memo, ReactNode, useCallback, useContext, useEffect,
 import "./default.scss";
 import {EditorContext} from "../../modules/wysiwygism";
 import {decrypt, encrypt} from "../../services/encryption";
+import EditorController from "./../../controller";
 
 interface ContentPanelProps {
     placeholder?: ReactNode | string;
@@ -14,12 +15,14 @@ const ContentPanel = ({placeholder, defaultValue, disabled, notifier}: ContentPa
 
     const {content, setContent} = useContext(EditorContext);
     const editorRef = useRef<HTMLDivElement>(null);
+    const {checkHowIsWritten} = EditorController;
 
     useEffect(() => {
         setContent(defaultValue);
         editorRef.current?.addEventListener("focus", () => {
             document.onselectionchange = e => {
-                // console.log(e)
+                console.log(e);
+                checkHowIsWritten();
             }
         })
         editorRef?.current?.focus();
