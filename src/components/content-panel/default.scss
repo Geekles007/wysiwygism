@@ -3,6 +3,11 @@
   width: 100vw;
   overflow-y: scroll;
 
+  a {
+    color: #1363DF;
+    cursor: pointer;
+  }
+
   &--placeholder {
     position: absolute;
     inset: 0;
@@ -40,6 +45,20 @@
     height: 100%;
     margin: 0 auto;
     outline: none;
+
+    .quote {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: rgba(255,255,255,.6);
+      border-left: 3px solid rgba(255,255,255,.2);
+      padding-left: 2em;
+    }
+
+    code {
+      padding:10px;
+      background: rgba(255,255,255,.1);
+      width: 100%;
+    }
   }
 
 }

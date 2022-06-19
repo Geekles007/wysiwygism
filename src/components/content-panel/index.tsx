@@ -50,9 +50,10 @@ const ContentPanel = ({placeholder, defaultValue, disabled, notifier}: ContentPa
              onChange={onChange}
              onBlur={onChange}
              ref={editorRef}
+             id={"editor"}
              placeholder={"Write something ..."}
              suppressContentEditableWarning={true}
-             dangerouslySetInnerHTML={{__html: decrypt(content)}}
+             dangerouslySetInnerHTML={{__html: decrypt(defaultValue ?? "")}}
              contentEditable={true} />
     </div>
 
