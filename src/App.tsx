@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.scss';
-import ToolsPanel from "./modules/tools-panel";
+import Wysigygism from "./modules/wysiwygism";
+import EditorController from "./controller"
 
 function App() {
-  return (
-    <div className="App">
-      <ToolsPanel />
-    </div>
-  );
+    const {getContent} = EditorController;
+
+    return (
+        <div className="App">
+            <Wysigygism defaultValue={getContent} />
+        </div>
+    );
 }
 
 export default App;
