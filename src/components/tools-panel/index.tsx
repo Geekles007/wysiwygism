@@ -22,10 +22,10 @@ import {IoIosReturnLeft, IoMdMove, IoIosReturnRight} from "react-icons/io";
 import {MdSplitscreen} from "react-icons/md";
 
 interface ToolsPanelProps {
-
+    disabled?: boolean;
 }
 
-const ToolsPanel = ({}: ToolsPanelProps) => {
+const ToolsPanel = ({disabled}: ToolsPanelProps) => {
     let offsetX = 0, offsetY = 0;
 
     const move = (e: any) => {

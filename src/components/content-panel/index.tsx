@@ -6,9 +6,11 @@ import {decrypt, encrypt} from "../../services/encryption";
 interface ContentPanelProps {
     placeholder?: ReactNode | string;
     defaultValue?: string;
+    notifier?: (content: string) => void;
+    disabled?: boolean;
 }
 
-const ContentPanel = ({placeholder, defaultValue}: ContentPanelProps) => {
+const ContentPanel = ({placeholder, defaultValue, disabled, notifier}: ContentPanelProps) => {
 
     const {content, setContent} = useContext(EditorContext);
     const editorRef = useRef<HTMLDivElement>(null);
@@ -25,6 +27,10 @@ const ContentPanel = ({placeholder, defaultValue}: ContentPanelProps) => {
 
     useEffect(() => {
         setContent((old: ReactNode | string) => old);
+
+        if(notifier && !disabled) {
+            notifier(content);
+        }
     }, [content]);
 
     const onChange = useCallback((e: ChangeEvent<HTMLDivElement>) => {

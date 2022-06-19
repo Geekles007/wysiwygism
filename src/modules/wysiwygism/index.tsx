@@ -12,14 +12,14 @@ interface WysigygismProps {
 
 export const EditorContext = React.createContext<any>(null);
 
-const Wysigygism = ({placeholder, defaultValue}: WysigygismProps) => {
+const Wysigygism = ({placeholder, defaultValue, changeNotifier, disabled = false}: WysigygismProps) => {
 
     const [content, setContent] = React.useState<ReactNode | string>("");
 
     return <EditorContext.Provider value={{content, setContent}}>
         <div className={"wrapper"}>
-            <ToolsPanel/>
-            <ContentPanel defaultValue={defaultValue} placeholder={placeholder}/>
+            <ToolsPanel disabled={disabled}/>
+            <ContentPanel notifier={changeNotifier} disabled={disabled} defaultValue={defaultValue} placeholder={placeholder}/>
         </div>
     </EditorContext.Provider>
 
